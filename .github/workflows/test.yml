@@ -32,3 +32,9 @@ jobs:
           npm run lint
           npm exec tsc
           npm test
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: boilerplate-${{ matrix.os }}
+          path: release
